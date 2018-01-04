@@ -32,7 +32,7 @@ public class CoordenadaService {
 	}
 
 	public void salvarCoordenada(Coordenada coordenada)throws Exception{
-                //Evitando dois estabelecimentos na mesma localização. Só adiciona se não exister a posição no banco.
+                //Evitando dois estabelecimentos na mesma localização. Só adiciona se não existir a posição no banco.
                 Coordenada existente = dao.buscarPonto(coordenada.getPosicaoX(), coordenada.getPosicaoY());
                 if(existente==null){
 		dao.salvar(coordenada);
